@@ -20,6 +20,7 @@ const messages = require("./en");
 const options = {
   key: fs.readFileSync("/etc/letsencrypt/live/potipress.com/privkey.pem"),
   cert: fs.readFileSync("/etc/letsencrypt/live/potipress.com/fullchain.pem"),
+  secureProtocol: "TLS_method", // This can be adjusted if needed
 };
 
 https
