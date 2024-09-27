@@ -68,7 +68,7 @@ https
       res.end("404 Not Found");
     }
   })
-  .listen(443);
+  .listen(80);
 
 console.log("Server running at https://api.juanchung.net");
 
@@ -77,4 +77,4 @@ http
     res.writeHead(301, { Location: `https://${req.headers.host}${req.url}` });
     res.end();
   })
-  .listen(80);
+  .listen(3000);
