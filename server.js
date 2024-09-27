@@ -18,10 +18,8 @@ const messages = require("./en");
 // Load SSL certificate and key
 // This will cause an error when running the server locally
 const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/api.juanchung.net/privkey.pem"),
-  cert: fs.readFileSync(
-    "/etc/letsencrypt/live/api.juanchung.net/fullchain.pem"
-  ),
+  key: fs.readFileSync("/etc/letsencrypt/live/potipress.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/potipress.com/fullchain.pem"),
 };
 
 https
@@ -70,7 +68,7 @@ https
   })
   .listen(80);
 
-console.log("Server running at https://api.juanchung.net");
+console.log("Server running at https://potipress.com");
 
 http
   .createServer((req, res) => {
