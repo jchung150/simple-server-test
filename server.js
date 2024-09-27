@@ -67,7 +67,7 @@ https
       res.end("404 Not Found");
     }
   })
-  .listen(443);
+  .listen(3000);
 
 console.log("Server running at https://potipress.com");
 
