@@ -66,7 +66,7 @@ https
       res.end("404 Not Found");
     }
   })
-  .listen(80);
+  .listen(443);
 
 console.log("Server running at https://potipress.com");
 
@@ -75,4 +75,4 @@ http
     res.writeHead(301, { Location: `https://${req.headers.host}${req.url}` });
     res.end();
   })
-  .listen(3000);
+  .listen(80);
