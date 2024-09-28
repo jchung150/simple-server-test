@@ -15,9 +15,6 @@ let url = require("url");
 let { getDate, writeFile, readFile } = require("./modules/utils");
 const messages = require("./en");
 
-// Load SSL certificate and key
-// This will cause an error when running the server locally
-
 http
   .createServer(function (req, res) {
     let q = url.parse(req.url, true);
