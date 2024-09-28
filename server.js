@@ -17,11 +17,12 @@ const messages = require("./en");
 
 // Load SSL certificate and key
 // This will cause an error when running the server locally
-const options = {
-  key: fs.readFileSync("/etc/letsencrypt/live/potipress.com/privkey.pem"),
-  cert: fs.readFileSync("/etc/letsencrypt/live/potipress.com/fullchain.pem"),
-  secureProtocol: "TLS_method", // This can be adjusted if needed
-};
+
+// const options = {
+//   key: fs.readFileSync("/etc/letsencrypt/live/potipress.com/privkey.pem"),
+//   cert: fs.readFileSync("/etc/letsencrypt/live/potipress.com/fullchain.pem"),
+//   secureProtocol: "TLS_method", // This can be adjusted if needed
+// };
 
 https
   .createServer(function (req, res) {
@@ -70,10 +71,3 @@ https
   .listen(3000);
 
 console.log("Server running at https://potipress.com");
-
-http
-  .createServer((req, res) => {
-    res.writeHead(301, { Location: `https://${req.headers.host}${req.url}` });
-    res.end();
-  })
-  .listen(80);
