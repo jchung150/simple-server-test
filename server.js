@@ -18,12 +18,6 @@ const messages = require("./en");
 // Load SSL certificate and key
 // This will cause an error when running the server locally
 
-// const options = {
-//   key: fs.readFileSync("/etc/letsencrypt/live/potipress.com/privkey.pem"),
-//   cert: fs.readFileSync("/etc/letsencrypt/live/potipress.com/fullchain.pem"),
-//   secureProtocol: "TLS_method", // This can be adjusted if needed
-// };
-
 http
   .createServer(function (req, res) {
     let q = url.parse(req.url, true);
