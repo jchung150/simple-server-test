@@ -24,7 +24,7 @@ const messages = require("./en");
 //   secureProtocol: "TLS_method", // This can be adjusted if needed
 // };
 
-https
+http
   .createServer(function (req, res) {
     let q = url.parse(req.url, true);
     const pathSegments = q.pathname
