@@ -27,6 +27,11 @@ class Server {
   }
 
   requestHandler(req, res) {
+    console.log("The server received a request");
+    res.writeHead(200, {
+      "Content-Type": "text/html",
+      "Access-Control-Allow-Origin": "*",
+    });
     let q = url.parse(req.url, true);
     const pathSegments = q.pathname
       .split("/")
