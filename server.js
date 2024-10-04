@@ -73,7 +73,7 @@ class Server {
     readFile(fileName, (err, data) => {
       if (err) {
         res.writeHead(404, { "Content-Type": "text/html" });
-        res.end(`Error: File '${fileName}' not found.`);
+        res.end(`File '${fileName}' not found.`);
       } else {
         res.writeHead(200, { "Content-Type": "text/html" });
         res.end(`<h3>${data}</h3>`);
